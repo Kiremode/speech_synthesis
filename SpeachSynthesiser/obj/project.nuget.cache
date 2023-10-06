@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "uJkYECTpmTEaz1emDgQZZXR1M8Na9I0mdw4Dx5SDfAw7vUesru1CPyTWJSo5gWZEAPlDx50N6yWdztmtUGV5fg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kire\\RiderProjects\\SpeachSynthesiser\\SpeachSynthesiser\\SpeachSynthesiser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kire\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Kire\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\Kire\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Kire\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\Kire\\.nuget\\packages\\system.speech\\6.0.0\\system.speech.6.0.0.nupkg.sha512",
+    "C:\\Users\\Kire\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.27\\microsoft.netcore.app.host.win-x64.3.1.27.nupkg.sha512"
+  ],
+  "logs": []
+}

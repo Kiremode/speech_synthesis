@@ -1,0 +1,58 @@
+﻿<Window x:Class="SpeachSynthesiser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpeachSynthesiser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#181818">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="SpeechText"   AcceptsReturn="True" VerticalScrollBarVisibility="Visible" 
+                 Background="Black" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4" BorderThickness="2" 
+                 BorderBrush="Black" TextWrapping="Wrap" FontStyle="Normal" Foreground="Azure"></TextBox>
+        <ScrollViewer Margin="5" BorderThickness="2" BorderBrush="Black" Foreground="Cornsilk" Background="#171717"
+                      Grid.Row="1" Grid.RowSpan="3" Grid.Column="4" x:Name="scrollViewer" Height="Auto"
+                      VerticalScrollBarVisibility="Auto" >
+            
+            <StackPanel x:Name="stackPanel" HorizontalAlignment="Center" 
+                        Height="Auto" VerticalAlignment="Top" Width="Auto" 
+            >
+               
+                <Label Padding="10" Foreground="Azure" HorizontalAlignment="Center">Pitch</Label>
+                
+                <DockPanel Margin="2" Width="150" VerticalAlignment="Center">
+                    
+                </DockPanel>
+                <Label Padding="10" Foreground="Azure" HorizontalAlignment="Center">Volume</Label>
+                <DockPanel Margin="2" VerticalAlignment="Center">
+                    <TextBox Width="30" Text="{Binding Path=Value, ElementName=voiceVolume, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" TextAlignment="Center"></TextBox>
+                    <Slider Minimum="1" Maximum="100" Name="voiceVolume" TickFrequency="1" TickPlacement="Both" IsSnapToTickEnabled="True"></Slider>
+                </DockPanel>
+                <Label Padding="10" Foreground="Azure" HorizontalAlignment="Center">Talk Speed</Label>
+                <DockPanel Margin="2" VerticalAlignment="Center">
+                    <TextBox Width="30" Text="{Binding Path=Value, ElementName=voiceSpeed, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" TextAlignment="Center"></TextBox>
+                    <Slider Minimum="-10" Maximum="10" Name="voiceSpeed" TickFrequency="1" TickPlacement="Both" IsSnapToTickEnabled="True"></Slider>
+                </DockPanel>
+                
+            </StackPanel>
+           
+        </ScrollViewer>
+        <Button Grid.Row="4" Grid.Column="4" Click="ButtonBase_OnClick" Margin=" 10 20">Speak</Button>
+    </Grid>
+</Window>
